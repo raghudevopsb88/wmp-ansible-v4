@@ -4,6 +4,9 @@ default:
 
 all: frontend postgresql auth-service portfolio-service analytics-service
 
+database: postgresql
+apps: frontend auth-service portfolio-service analytics-service
+
 frontend:
 	ansible-playbook -i frontend-dev.raghudevopsb88.online, -e ansible_user=ec2-user -e ansible_password=DevOps321 main.yml -e COMPONENT=frontend
 postgresql:
